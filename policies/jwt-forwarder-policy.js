@@ -34,16 +34,15 @@ module.exports = {
         title: 'Fields',
         description: 'List of JWT Payload fields to forward',
         type: 'array',
-        default: ['sub'],
-        required: false
+        default: ['sub']
       },
       prefix: {
         title: 'Prefix',
         description: 'Prefix used for header names',
         type: 'string',
-        default: 'x-jwt-',
-        required: false
+        default: 'x-jwt-'
       }
-    }
+    },
+    required: ['fields', 'prefix']
   }
 };
