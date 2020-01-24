@@ -1,0 +1,14 @@
+{
+  "name": "express-gateway-plugin-jwt-forwarder",
+  "version": "0.0.1",
+  "description": "Plugin jwt-forwarder for Express Gateway",
+  "keywords": [
+    "JWT",
+    "Extract",
+    "Forward-Headers"
+  ],
+  "main": "manifest.js",
+  "repository": "https://github.com/xavier-rodet/express-gateway-plugin-jwt-forwarder",
+  "author": "Xavier RODET",
+  "license": "MIT"
+}
