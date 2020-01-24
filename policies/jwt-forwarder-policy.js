@@ -23,9 +23,9 @@ module.exports = {
       const jwt = req.get('Authorization').replace('Bearer ', '');
       const payload = parseJwt(jwt);
 
-      actionParams.fields.forEach(field => {
+      parameters.fields.forEach(field => {
         if (field in payload) {
-          req.headers[actionParams.prefix + field] = payload[field];
+          req.headers[parameters.prefix + field] = payload[field];
         }
       });
 

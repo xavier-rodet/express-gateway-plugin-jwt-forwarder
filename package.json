@@ -1,6 +1,6 @@
 {
   "name": "express-gateway-plugin-jwt-forwarder",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Plugin jwt-forwarder for Express Gateway",
   "keywords": [
     "JWT",
