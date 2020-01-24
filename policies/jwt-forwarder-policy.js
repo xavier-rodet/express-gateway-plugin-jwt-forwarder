@@ -18,6 +18,7 @@ module.exports = {
   name: 'jwt-forwarder',
   policy: actionParams => {
     return (req, res, next) => {
+      const jwt = req.get('Authorization').replace('Bearer ', '');
       const payload = parseJwt(jwt);
 
       for (let payloadField in actionParams.fields) {

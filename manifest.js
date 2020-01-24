@@ -1,5 +1,5 @@
 module.exports = {
-  version: '1.2.0',
+  version: '0.0.7',
   policies: ['jwt-forwarder'],
   init: function(pluginContext) {
     let policy = require('./policies/jwt-forwarder-policy');
