@@ -16,14 +16,17 @@ function parseJwt(token) {
 // Insipred by : https://github.com/crohit92/express-gateway-plugin-jwt-extractor/blob/master/policies/jwt-extractor-policy.js
 module.exports = {
   name: 'jwt-forwarder',
-  policy: actionParams => {
+  policy: parameters => {
     return (req, res, next) => {
       const jwt = req.get('Authorization').replace('Bearer ', '');
       const payload = parseJwt(jwt);
 
-      for (let payloadField in actionParams.fields) {
-        req.headers[actionParams.prefix + payloadField] = payload[payloadField];
-      }
+      actionParams.fields.forEach(field => {
+        if (field in payload) {
+          req.headers[actionParams.prefix + field] = payload[field];
+        }
+      });
+
       next();
     };
   },
